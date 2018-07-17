@@ -1,3 +1,16 @@
 <p>My cat is very grumpy</p>
 
 <p>这里是<a href="consult-api/apidoc/apidoc.html">链创中医问诊后端API接口文档</a>.</p>
+
+<script type="text/javascript">
+    $(function() {
+        var height=document.documentElement.clientHeight;
+        document.getElementById('iframe-page-content').style.height=height+'px';
+        });
+        var menuClick = function(menuUrl) {
+        $("#iframe-page-content").attr('src',menuUrl);
+    };
+</script>
+     
+<iframe id="iframe-page-content" src="${base}resource/html/myindex.jsp" width="100%"  frameborder="no" border="0" marginwidth="0" marginheight=" 0" scrolling="no" allowtransparency="yes"></iframe>
+     
