@@ -38,7 +38,7 @@
         a {
             display: block;
             /*将a变成块状*/
-            width: 100px;
+            /* width: 100px; */
             /*设置块的宽度*/
             height: 50px;
             /*设置块的长度*/
@@ -59,27 +59,48 @@
         a:hover {
             background-color: #2f6f4f;
         }
+
+        .app {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 100%;
+        }
+
+        .nav {
+            width: 20%;
+            background-color: #2f4f4f;
+            height: 100%;
+        }
+
+        #page_content {
+            width: 80%;
+            height: 100%;
+        }
     </style>
 </head>
 
 <body>
-    <div>
-        <ul class=daohang>
-            <li>
-                <a href="consult-api/apidoc/apidoc.html" target="menuFrame">首页</a>
-            </li>
-            <li>
-                <a href="" target="menuFrame">课程章节</a>
-            </li>
-            <li>
-                <a href="" target="menuFrame">课程实验</a>
-            </li>
-        </ul>
-    </div>
-    </table>
-    <div id="page_content">
-        <iframe id="menuFrame" name="menuFrame" src="index.html" style="overflow:visible;" scrolling="yes" frameborder="no" width="100%" height="100%; float:left">
-           </iframe>
+    <div class="app">
+        <div class="nav">
+            <ul class=daohang>
+                <li>
+                    <a href="consult-api/apidoc/apidoc.html" target="menuFrame">首页</a>
+                </li>
+                <li>
+                    <a href="" target="menuFrame">课程章节</a>
+                </li>
+                <li>
+                    <a href="" target="menuFrame">课程实验</a>
+                </li>
+            </ul>
+        </div>
+        </table>
+        <div id="page_content">
+            <iframe id="menuFrame" name="menuFrame" src="index.html" style="overflow:visible;" scrolling="yes" frameborder="no" width="100%"
+                height="100%; float:left">
+            </iframe>
+        </div>
     </div>
 </body>
 
