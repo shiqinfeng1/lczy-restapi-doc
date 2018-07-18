@@ -21,12 +21,30 @@ var APIDATA = {
   },
   "api_list" : [ {
     "api_summary" : {
-      "title" : "Create patient_login",
+      "title" : "Create chunyu_doctor_response",
       "method" : "POST",
-      "path" : "/v1/patient_login"
+      "path" : "/v1/chunyu_doctor_response"
     },
     "api_request" : {
-      "header" : "Content-Type : application/json; charset=UTF-8\r\nAccept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\n",
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   problem_id [number]\r\n   user_id [string]\r\n   sign [string]\r\n   atime [number]\r\n   content [string]\r\n   is_summary [boolean]\r\n   doctor [object]\r\n    &#9500;&#9472;&#9472;id [string]\r\n    &#9500;&#9472;&#9472;name [string]\r\n    &#9500;&#9472;&#9472;image [string]\r\n    &#9500;&#9472;&#9472;title [string]\r\n    &#9500;&#9472;&#9472;level_title [string]\r\n    &#9500;&#9472;&#9472;clinic [string]\r\n    &#9500;&#9472;&#9472;clinic_no [string]\r\n    &#9500;&#9472;&#9472;hospital [string]\r\n    &#9500;&#9472;&#9472;hospital_grade [string]\r\n    &#9500;&#9472;&#9472;good_at [string]\r\n",
+      "example" : "{\n  &quot;problem_id&quot;: 1,\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;sign&quot;: &quot;12345abcde&quot;,\n  &quot;atime&quot;: 137322417,\n  &quot;content&quot;: &quot;[ {\\u0027type\\u0027: \\u0027text\\u0027,\\u0027text\\u0027: \\u0027&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;\\u0027},{\\u0027type\\u0027: \\u0027image\\u0027,\\u0027file\\u0027: \\u0027&#36825;&#26159;&#22270;&#29255;&#24418;&#24335;&#30340;&#20869;&#23481;,&#36825;&#37324;&#26159;&#22270;&#29255;&#30340; url\\u0027},{\\u0027type\\u0027: \\u0027audio\\u0027,\\u0027file\\u0027: \\u0027&#36825;&#26159;&#35821;&#38899;&#24418;&#24335;&#30340;&#20869;&#23481;,&#36825;&#37324;&#26159;&#38899;&#39057;&#25991;&#20214;&#30340; url\\u0027}]&quot;,\n  &quot;is_summary&quot;: true,\n  &quot;doctor&quot;: {\n    &quot;id&quot;: &quot;&#21307;&#29983; ID&quot;,\n    &quot;name&quot;: &quot;&#29579;&#38050;&#34507;&quot;,\n    &quot;image&quot;: &quot;&#21307;&#29983;&#29031;&#29255;&#30340; url&quot;,\n    &quot;title&quot;: &quot;&#21307;&#29983;&#32844;&#31216;&quot;,\n    &quot;level_title&quot;: &quot;&#24102;&#21307;&#38498;&#32423;&#21035;&#30340;&#21307;&#29983;&#32844;&#31216;&quot;,\n    &quot;clinic&quot;: &quot;&#31185;&#23460;&quot;,\n    &quot;clinic_no&quot;: &quot;&#31185;&#23460;&#21495;&quot;,\n    &quot;hospital&quot;: &quot;&#21327;&#21644;&#21307;&#38498;&quot;,\n    &quot;hospital_grade&quot;: &quot;&#19977;&#32423;&#30002;&#31561;&quot;,\n    &quot;good_at&quot;: &quot;&#20869;&#31185;, &#22806;&#31185;&quot;\n  }\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   error [number]\r\n   error_msg [string]\r\n",
+      "example" : "{\n  &quot;error&quot;: 0,\n  &quot;error_msg&quot;: &quot;&quot;\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create chunyu_patient_login",
+      "method" : "POST",
+      "path" : "/v1/chunyu_patient_login"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
       "model" : "   user_id [string]\r\n   password [string]\r\n   platform [string]\r\n",
       "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;password&quot;: &quot;654321&quot;,\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
     },
@@ -39,14 +57,14 @@ var APIDATA = {
     } ]
   }, {
     "api_summary" : {
-      "title" : "Create doctor_response",
+      "title" : "Create chunyu_question_close",
       "method" : "POST",
-      "path" : "/v1/doctor_response"
+      "path" : "/v1/chunyu_question_close"
     },
     "api_request" : {
       "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   problem_id [number]\r\n   user_id [string]\r\n   sign [string]\r\n   atime [number]\r\n   content [string]\r\n   is_summary [boolean]\r\n   doctor [object]\r\n    &#9500;&#9472;&#9472;id [string]\r\n    &#9500;&#9472;&#9472;name [string]\r\n    &#9500;&#9472;&#9472;image [string]\r\n    &#9500;&#9472;&#9472;title [string]\r\n    &#9500;&#9472;&#9472;level_title [string]\r\n    &#9500;&#9472;&#9472;clinic [string]\r\n    &#9500;&#9472;&#9472;clinic_no [string]\r\n    &#9500;&#9472;&#9472;hospital [string]\r\n    &#9500;&#9472;&#9472;hospital_grade [string]\r\n    &#9500;&#9472;&#9472;good_at [string]\r\n",
-      "example" : "{\n  &quot;problem_id&quot;: 1,\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;sign&quot;: &quot;12345abcde&quot;,\n  &quot;atime&quot;: 137322417,\n  &quot;content&quot;: &quot;[ {\\u0027type\\u0027: \\u0027text\\u0027,\\u0027text\\u0027: \\u0027&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;\\u0027},{\\u0027type\\u0027: \\u0027image\\u0027,\\u0027file\\u0027: \\u0027&#36825;&#26159;&#22270;&#29255;&#24418;&#24335;&#30340;&#20869;&#23481;,&#36825;&#37324;&#26159;&#22270;&#29255;&#30340; url\\u0027},{\\u0027type\\u0027: \\u0027audio\\u0027,\\u0027file\\u0027: \\u0027&#36825;&#26159;&#35821;&#38899;&#24418;&#24335;&#30340;&#20869;&#23481;,&#36825;&#37324;&#26159;&#38899;&#39057;&#25991;&#20214;&#30340; url\\u0027}]&quot;,\n  &quot;is_summary&quot;: true,\n  &quot;doctor&quot;: {\n    &quot;id&quot;: &quot;&#21307;&#29983; ID&quot;,\n    &quot;name&quot;: &quot;&#29579;&#38050;&#34507;&quot;,\n    &quot;image&quot;: &quot;&#21307;&#29983;&#29031;&#29255;&#30340; url&quot;,\n    &quot;title&quot;: &quot;&#21307;&#29983;&#32844;&#31216;&quot;,\n    &quot;level_title&quot;: &quot;&#24102;&#21307;&#38498;&#32423;&#21035;&#30340;&#21307;&#29983;&#32844;&#31216;&quot;,\n    &quot;clinic&quot;: &quot;&#31185;&#23460;&quot;,\n    &quot;clinic_no&quot;: &quot;&#31185;&#23460;&#21495;&quot;,\n    &quot;hospital&quot;: &quot;&#21327;&#21644;&#21307;&#38498;&quot;,\n    &quot;hospital_grade&quot;: &quot;&#19977;&#32423;&#30002;&#31561;&quot;,\n    &quot;good_at&quot;: &quot;&#20869;&#31185;, &#22806;&#31185;&quot;\n  }\n}"
+      "model" : "   problem_id [number]\r\n   user_id [string]\r\n   sign [string]\r\n   atime [number]\r\n   status [string]\r\n   msg [string]\r\n   price [number]\r\n",
+      "example" : "{\n  &quot;problem_id&quot;: 1,\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;sign&quot;: &quot;12345abcde&quot;,\n  &quot;atime&quot;: 137322417,\n  &quot;status&quot;: &quot;close&quot;,\n  &quot;msg&quot;: &quot;close&quot;,\n  &quot;price&quot;: 10000\n}"
     },
     "api_response" : [ {
       "status" : "HTTP/1.1 200 ",
