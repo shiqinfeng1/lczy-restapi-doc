@@ -21,24 +21,6 @@ var APIDATA = {
   },
   "api_list" : [ {
     "api_summary" : {
-      "title" : "Create chunyu_question_close",
-      "method" : "POST",
-      "path" : "/v1/chunyu_question_close"
-    },
-    "api_request" : {
-      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   problem_id [number]\r\n   user_id [string]\r\n   sign [string]\r\n   atime [number]\r\n   status [string]\r\n   msg [string]\r\n   price [number]\r\n",
-      "example" : "{\n  &quot;problem_id&quot;: 1,\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;sign&quot;: &quot;12345abcde&quot;,\n  &quot;atime&quot;: 137322417,\n  &quot;status&quot;: &quot;close&quot;,\n  &quot;msg&quot;: &quot;close&quot;,\n  &quot;price&quot;: 10000\n}"
-    },
-    "api_response" : [ {
-      "status" : "HTTP/1.1 200 ",
-      "code" : 200,
-      "message" : "OK",
-      "model" : "   error [number]\r\n   error_msg [string]\r\n",
-      "example" : "{\n  &quot;error&quot;: 0,\n  &quot;error_msg&quot;: &quot;&quot;\n}"
-    } ]
-  }, {
-    "api_summary" : {
       "title" : "Create get_clinic_doctors",
       "method" : "POST",
       "path" : "/v1/get_clinic_doctors"
@@ -57,24 +39,6 @@ var APIDATA = {
     } ]
   }, {
     "api_summary" : {
-      "title" : "Create create_paid_problem",
-      "method" : "POST",
-      "path" : "/v1/create_paid_problem"
-    },
-    "api_request" : {
-      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   user_id [string]\r\n   clinic_no [string]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   partner_order_id [string]\r\n   pay_type [string]\r\n   Platform [string]\r\n",
-      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;clinic_no&quot;: &quot;1&quot;,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;patient_meta&quot;,\n      &quot;age&quot;: &quot;15&#23681;&quot;,\n      &quot;sex&quot;: &quot;&#30007;&quot;\n    }\n  ],\n  &quot;partner_order_id&quot;: &quot;123abc&quot;,\n  &quot;pay_type&quot;: &quot;qc_hospital_common&quot;,\n  &quot;Platform&quot;: &quot;chunyu&quot;\n}"
-    },
-    "api_response" : [ {
-      "status" : "HTTP/1.1 200 ",
-      "code" : 200,
-      "message" : "OK",
-      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;problem_id [number]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
-      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;problem_id&quot;: 442936668,\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
-    } ]
-  }, {
-    "api_summary" : {
       "title" : "Create get_recommended_doctors",
       "method" : "POST",
       "path" : "/v1/get_recommended_doctors"
@@ -90,78 +54,6 @@ var APIDATA = {
       "message" : "OK",
       "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;doctors [array]\r\n    &#9474;   &#9500;&#9472;&#9472;clinic_name [string]\r\n    &#9474;   &#9500;&#9472;&#9472;good_at [string]\r\n    &#9474;   &#9500;&#9472;&#9472;hospital_name [string]\r\n    &#9474;   &#9500;&#9472;&#9472;image [string]\r\n    &#9474;   &#9500;&#9472;&#9472;id [string]\r\n    &#9474;   &#9500;&#9472;&#9472;name [string]\r\n    &#9474;   &#9500;&#9472;&#9472;price [number]\r\n    &#9474;   &#9500;&#9472;&#9472;purchase_num [number]\r\n    &#9474;   &#9500;&#9472;&#9472;title [string]\r\n    &#9474;   &#9500;&#9472;&#9472;is_famous_doctor [boolean]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
       "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;doctors&quot;: [\n      {\n        &quot;clinic_name&quot;: &quot;&#22919;&#31185;&quot;,\n        &quot;good_at&quot;: &quot;&#25797;&#38271;&#35813;&#25797;&#38271;&#30340;&#65292;&#19981;&#22815;&#22235;&#21313;&#20010;&#23383;&#23558;&#20852;&#24314;&#22320;&#19979;&#26469;&#23601;&#22823;&#23478;&#37117;&#24456;&#22810;&#24456;&#22810;&#24456;&#20320;&#25165;&#21507;&#30340;&#26469;&#21679;&#33707;&#36807;&#20110;&#32463;&#27982;&#23398;&#65292;&#22909;&#20687;&#21507;&#20102;&#38754;&#26465; \\r\\n\\r\\n&quot;,\n        &quot;hospital_name&quot;: &quot;&#21271;&#20140;&#21327;&#21644;&#21307;&#38498;&quot;,\n        &quot;image&quot;: &quot;https://media2.chunyuyisheng.com/@/media/images/2016/03/29/61ad355d8b47_w180_h180_.jpg?imageMogr2/thumbnail/150x&quot;,\n        &quot;id&quot;: &quot;clinic_chanke_zhangrongya&quot;,\n        &quot;name&quot;: &quot;&#31456;&#33993;&#23045;2&quot;,\n        &quot;price&quot;: 100,\n        &quot;purchase_num&quot;: 2395,\n        &quot;title&quot;: &quot;&#21103;&#20027;&#20219;&#21307;&#24072;&quot;,\n        &quot;is_famous_doctor&quot;: false\n      },\n      {\n        &quot;clinic_name&quot;: &quot;&#22919;&#31185;&quot;,\n        &quot;good_at&quot;: &quot;&#30333;&#20113;&#20598;&#23572;&#20250;&#36974;&#20303;&#34013;&#22825;&#65292;&#20294;&#34013;&#22825;&#27704;&#36828;&#22312;&#30333;&#20113;&#20043;&#19978;&#65281;djdidkdkdoskdjdkxnkd\\r\\n&#36151;&#27454;&#26041;&#35299;&#25918;&#23425;&#22799;&#20030;&#34892;&#21335;&#38750;&#20030;&#34892;&#24180;&#24230;&#20915;&#23450;&#20026;&#20154;&#29238;&#27597;&quot;,\n        &quot;hospital_name&quot;: &quot;&#37073;&#24030;&#22823;&#23398;&#31532;&#19968;&#38468;&#23646;&#21307;&#38498;&quot;,\n        &quot;image&quot;: &quot;https://media3.chunyuyisheng.com/hzsAAKj0y1RiKmwU-181f684d-904c-4e36-bd3e-2eb0098a3074_w576_h576.png?imageMogr2/thumbnail/150x&quot;,\n        &quot;id&quot;: &quot;b092c63582871cc0&quot;,\n        &quot;name&quot;: &quot;&#21608;&#29618;&quot;,\n        &quot;price&quot;: 100,\n        &quot;purchase_num&quot;: 1786,\n        &quot;title&quot;: &quot;&#20027;&#20219;&#21307;&#24072;&quot;,\n        &quot;is_famous_doctor&quot;: false\n      }\n    ],\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
-    } ]
-  }, {
-    "api_summary" : {
-      "title" : "Create chunyu_doctor_response",
-      "method" : "POST",
-      "path" : "/v1/chunyu_doctor_response"
-    },
-    "api_request" : {
-      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   problem_id [number]\r\n   user_id [string]\r\n   sign [string]\r\n   atime [number]\r\n   content [string]\r\n   is_summary [boolean]\r\n   doctor [object]\r\n    &#9500;&#9472;&#9472;id [string]\r\n    &#9500;&#9472;&#9472;name [string]\r\n    &#9500;&#9472;&#9472;image [string]\r\n    &#9500;&#9472;&#9472;title [string]\r\n    &#9500;&#9472;&#9472;level_title [string]\r\n    &#9500;&#9472;&#9472;clinic [string]\r\n    &#9500;&#9472;&#9472;clinic_no [string]\r\n    &#9500;&#9472;&#9472;hospital [string]\r\n    &#9500;&#9472;&#9472;hospital_grade [string]\r\n    &#9500;&#9472;&#9472;good_at [string]\r\n",
-      "example" : "{\n  &quot;problem_id&quot;: 1,\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;sign&quot;: &quot;12345abcde&quot;,\n  &quot;atime&quot;: 137322417,\n  &quot;content&quot;: &quot;[ {\\&quot;type\\&quot;:\\&quot;text\\&quot;,\\&quot;text\\&quot;: \\&quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;\\&quot;}]&quot;,\n  &quot;is_summary&quot;: true,\n  &quot;doctor&quot;: {\n    &quot;id&quot;: &quot;&#21307;&#29983; ID&quot;,\n    &quot;name&quot;: &quot;&#29579;&#38050;&#34507;&quot;,\n    &quot;image&quot;: &quot;&#21307;&#29983;&#29031;&#29255;&#30340; url&quot;,\n    &quot;title&quot;: &quot;&#21307;&#29983;&#32844;&#31216;&quot;,\n    &quot;level_title&quot;: &quot;&#24102;&#21307;&#38498;&#32423;&#21035;&#30340;&#21307;&#29983;&#32844;&#31216;&quot;,\n    &quot;clinic&quot;: &quot;&#31185;&#23460;&quot;,\n    &quot;clinic_no&quot;: &quot;&#31185;&#23460;&#21495;&quot;,\n    &quot;hospital&quot;: &quot;&#21327;&#21644;&#21307;&#38498;&quot;,\n    &quot;hospital_grade&quot;: &quot;&#19977;&#32423;&#30002;&#31561;&quot;,\n    &quot;good_at&quot;: &quot;&#20869;&#31185;, &#22806;&#31185;&quot;\n  }\n}"
-    },
-    "api_response" : [ {
-      "status" : "HTTP/1.1 200 ",
-      "code" : 200,
-      "message" : "OK",
-      "model" : "   error [number]\r\n   error_msg [string]\r\n",
-      "example" : "{\n  &quot;error&quot;: 0,\n  &quot;error_msg&quot;: &quot;&quot;\n}"
-    } ]
-  }, {
-    "api_summary" : {
-      "title" : "Create create_free_problem",
-      "method" : "POST",
-      "path" : "/v1/create_free_problem"
-    },
-    "api_request" : {
-      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   user_id [string]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   Platform [string]\r\n   clinic_no [string]\r\n",
-      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;patient_meta&quot;,\n      &quot;age&quot;: &quot;15&#23681;&quot;,\n      &quot;sex&quot;: &quot;&#30007;&quot;\n    }\n  ],\n  &quot;Platform&quot;: &quot;chunyu&quot;,\n  &quot;clinic_no&quot;: &quot;1&quot;\n}"
-    },
-    "api_response" : [ {
-      "status" : "HTTP/1.1 200 ",
-      "code" : 200,
-      "message" : "OK",
-      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;problem_id [number]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
-      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;problem_id&quot;: 442936660,\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
-    } ]
-  }, {
-    "api_summary" : {
-      "title" : "Create append_problem",
-      "method" : "POST",
-      "path" : "/v1/append_problem"
-    },
-    "api_request" : {
-      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   user_id [string]\r\n   problem_id [number]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   platform [string]\r\n",
-      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;problem_id&quot;: 442936669,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#25105;&#21448;&#24863;&#20882;&#20102;&quot;\n    }\n  ],\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
-    },
-    "api_response" : [ {
-      "status" : "HTTP/1.1 200 ",
-      "code" : 200,
-      "message" : "OK",
-      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
-      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;error&quot;: 10603,\n    &quot;error_msg&quot;: &quot;&#24403;&#21069;&#38382;&#39064;&#29366;&#24577;&#19981;&#33021;&#36827;&#34892;&#35813;&#25805;&#20316;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
-    } ]
-  }, {
-    "api_summary" : {
-      "title" : "Create assess_problem",
-      "method" : "POST",
-      "path" : "/v1/assess_problem"
-    },
-    "api_request" : {
-      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   user_id [string]\r\n   problem_id [number]\r\n   assess_info [object]\r\n    &#9500;&#9472;&#9472;level [string]\r\n    &#9500;&#9472;&#9472;tag_keys [array]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   platform [string]\r\n",
-      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;problem_id&quot;: 442936669,\n  &quot;assess_info&quot;: {\n    &quot;level&quot;: &quot;best&quot;,\n    &quot;tag_keys&quot;: [\n      &quot;3201&quot;,\n      &quot;3102&quot;\n    ]\n  },\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#22909;&#22909;&#22909;&quot;\n    }\n  ],\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
-    },
-    "api_response" : [ {
-      "status" : "HTTP/1.1 200 ",
-      "code" : 200,
-      "message" : "OK",
-      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
-      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;error&quot;: 1,\n    &quot;error_msg&quot;: &quot;&#19981;&#33021;&#35780;&#20215;&#27809;&#26377;&#22238;&#22797;&#30340;&#38382;&#39064;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
     } ]
   }, {
     "api_summary" : {
@@ -186,24 +78,6 @@ var APIDATA = {
       "message" : "OK",
       "model" : "   errcode [string]\r\n   msg [string]\r\n   data [array]\r\n    &#9500;&#9472;&#9472;problem [object]\r\n    &#9474;   &#9500;&#9472;&#9472;id [number]\r\n    &#9474;   &#9500;&#9472;&#9472;status [string]\r\n    &#9474;   &#9500;&#9472;&#9472;price [number]\r\n    &#9474;   &#9500;&#9472;&#9472;to_doc [boolean]\r\n    &#9474;   &#9500;&#9472;&#9472;title [string]\r\n    &#9474;   &#9500;&#9472;&#9472;ask [string]\r\n    &#9474;   &#9500;&#9472;&#9472;clinic_no [string]\r\n    &#9474;   &#9500;&#9472;&#9472;hospital_name [string]\r\n    &#9474;   &#9500;&#9472;&#9472;is_viewed [boolean]\r\n    &#9474;   &#9500;&#9472;&#9472;has_answer [boolean]\r\n    &#9474;   &#9500;&#9472;&#9472;need_assess [boolean]\r\n    &#9474;   &#9500;&#9472;&#9472;created_time_ms [number]\r\n    &#9474;   &#9500;&#9472;&#9472;created_time [string]\r\n    &#9474;   &#9500;&#9472;&#9472;star [number]\r\n    &#9500;&#9472;&#9472;doctor [object]\r\n    &#9474;   &#9500;&#9472;&#9472;id [string]\r\n    &#9474;   &#9500;&#9472;&#9472;name [string]\r\n    &#9474;   &#9500;&#9472;&#9472;image [string]\r\n    &#9474;   &#9500;&#9472;&#9472;title [string]\r\n    &#9474;   &#9500;&#9472;&#9472;level_title [string]\r\n    &#9474;   &#9500;&#9472;&#9472;clinic [string]\r\n    &#9474;   &#9500;&#9472;&#9472;hospital [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
       "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: [\n    {\n      &quot;problem&quot;: {\n        &quot;id&quot;: 442936722,\n        &quot;status&quot;: &quot;a&quot;,\n        &quot;price&quot;: 0,\n        &quot;to_doc&quot;: true,\n        &quot;title&quot;: &quot;&#36825;&#37324;&#26159;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&#65288;&#30007;&#65292;15&#23681;&#65289;&quot;,\n        &quot;ask&quot;: &quot;&#36825;&#37324;&#26159;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&#65288;&#30007;&#65292;15&#23681;&#65289;&quot;,\n        &quot;clinic_no&quot;: &quot;1&quot;,\n        &quot;hospital_name&quot;: &quot;&quot;,\n        &quot;is_viewed&quot;: false,\n        &quot;has_answer&quot;: false,\n        &quot;need_assess&quot;: false,\n        &quot;created_time_ms&quot;: 1532012936000,\n        &quot;created_time&quot;: &quot;2018-07-19 23:08:56&quot;,\n        &quot;star&quot;: -1\n      },\n      &quot;doctor&quot;: {\n        &quot;id&quot;: &quot;b092c63582871cc0&quot;,\n        &quot;name&quot;: &quot;&#21608;&#29618;&quot;,\n        &quot;image&quot;: &quot;https://media3.chunyuyisheng.com/hzsAAKj0y1RiKmwU-181f684d-904c-4e36-bd3e-2eb0098a3074_w576_h576.png?imageMogr2/thumbnail/150x&quot;,\n        &quot;title&quot;: &quot;&#20027;&#20219;&#21307;&#24072;&quot;,\n        &quot;level_title&quot;: &quot;&#19977;&#32423;&#30002;&#31561;&#21307;&#38498;&#20027;&#20219;&#21307;&#24072;&quot;,\n        &quot;clinic&quot;: &quot;&#22919;&#31185;&quot;,\n        &quot;hospital&quot;: &quot;&#37073;&#24030;&#22823;&#23398;&#31532;&#19968;&#38468;&#23646;&#21307;&#38498;&quot;\n      }\n    },\n    {\n      &quot;problem&quot;: {\n        &quot;id&quot;: 442936669,\n        &quot;status&quot;: &quot;c&quot;,\n        &quot;price&quot;: 0,\n        &quot;to_doc&quot;: true,\n        &quot;title&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&#65288;&#30007;&#65292;15&#23681;&#65289;&quot;,\n        &quot;ask&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&#65288;&#30007;&#65292;15&#23681;&#65289;&quot;,\n        &quot;clinic_no&quot;: &quot;1&quot;,\n        &quot;hospital_name&quot;: &quot;&quot;,\n        &quot;is_viewed&quot;: false,\n        &quot;has_answer&quot;: false,\n        &quot;need_assess&quot;: false,\n        &quot;created_time_ms&quot;: 1531981458000,\n        &quot;created_time&quot;: &quot;2018-07-19 14:24:18&quot;,\n        &quot;star&quot;: -1\n      },\n      &quot;doctor&quot;: {\n        &quot;id&quot;: &quot;b092c63582871cc0&quot;,\n        &quot;name&quot;: &quot;&#21608;&#29618;&quot;,\n        &quot;image&quot;: &quot;https://media3.chunyuyisheng.com/hzsAAKj0y1RiKmwU-181f684d-904c-4e36-bd3e-2eb0098a3074_w576_h576.png?imageMogr2/thumbnail/150x&quot;,\n        &quot;title&quot;: &quot;&#20027;&#20219;&#21307;&#24072;&quot;,\n        &quot;level_title&quot;: &quot;&#19977;&#32423;&#30002;&#31561;&#21307;&#38498;&#20027;&#20219;&#21307;&#24072;&quot;,\n        &quot;clinic&quot;: &quot;&#22919;&#31185;&quot;,\n        &quot;hospital&quot;: &quot;&#37073;&#24030;&#22823;&#23398;&#31532;&#19968;&#38468;&#23646;&#21307;&#38498;&quot;\n      }\n    },\n    {\n      &quot;problem&quot;: {\n        &quot;id&quot;: 442936668,\n        &quot;status&quot;: &quot;c&quot;,\n        &quot;price&quot;: 0,\n        &quot;to_doc&quot;: false,\n        &quot;title&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&#65288;&#30007;&#65292;15&#23681;&#65289;&quot;,\n        &quot;ask&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&#65288;&#30007;&#65292;15&#23681;&#65289;&quot;,\n        &quot;clinic_no&quot;: &quot;2&quot;,\n        &quot;hospital_name&quot;: &quot;&quot;,\n        &quot;is_viewed&quot;: false,\n        &quot;has_answer&quot;: false,\n        &quot;need_assess&quot;: false,\n        &quot;created_time_ms&quot;: 1531980912000,\n        &quot;created_time&quot;: &quot;2018-07-19 14:15:12&quot;,\n        &quot;star&quot;: -1\n      },\n      &quot;doctor&quot;: {\n        &quot;id&quot;: &quot;&quot;,\n        &quot;name&quot;: &quot;&quot;,\n        &quot;image&quot;: &quot;&quot;,\n        &quot;title&quot;: &quot;&quot;,\n        &quot;level_title&quot;: &quot;&quot;,\n        &quot;clinic&quot;: &quot;&quot;,\n        &quot;hospital&quot;: &quot;&quot;\n      }\n    },\n    {\n      &quot;problem&quot;: {\n        &quot;id&quot;: 442936660,\n        &quot;status&quot;: &quot;n&quot;,\n        &quot;price&quot;: 0,\n        &quot;to_doc&quot;: false,\n        &quot;title&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&#65288;&#30007;&#65292;15&#23681;&#65289;&quot;,\n        &quot;ask&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&#65288;&#30007;&#65292;15&#23681;&#65289;&quot;,\n        &quot;clinic_no&quot;: &quot;2&quot;,\n        &quot;hospital_name&quot;: &quot;&quot;,\n        &quot;is_viewed&quot;: false,\n        &quot;has_answer&quot;: false,\n        &quot;need_assess&quot;: false,\n        &quot;created_time_ms&quot;: 1531975073000,\n        &quot;created_time&quot;: &quot;2018-07-19 12:37:53&quot;,\n        &quot;star&quot;: -1\n      },\n      &quot;doctor&quot;: {\n        &quot;id&quot;: &quot;&quot;,\n        &quot;name&quot;: &quot;&quot;,\n        &quot;image&quot;: &quot;&quot;,\n        &quot;title&quot;: &quot;&quot;,\n        &quot;level_title&quot;: &quot;&quot;,\n        &quot;clinic&quot;: &quot;&quot;,\n        &quot;hospital&quot;: &quot;&quot;\n      }\n    },\n    {\n      &quot;problem&quot;: {\n        &quot;id&quot;: 442936659,\n        &quot;status&quot;: &quot;n&quot;,\n        &quot;price&quot;: 0,\n        &quot;to_doc&quot;: false,\n        &quot;title&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&quot;,\n        &quot;ask&quot;: &quot;&quot;,\n        &quot;clinic_no&quot;: &quot;2&quot;,\n        &quot;hospital_name&quot;: &quot;&quot;,\n        &quot;is_viewed&quot;: false,\n        &quot;has_answer&quot;: false,\n        &quot;need_assess&quot;: false,\n        &quot;created_time_ms&quot;: 1531975019000,\n        &quot;created_time&quot;: &quot;2018-07-19 12:36:59&quot;,\n        &quot;star&quot;: -1\n      },\n      &quot;doctor&quot;: {\n        &quot;id&quot;: &quot;&quot;,\n        &quot;name&quot;: &quot;&quot;,\n        &quot;image&quot;: &quot;&quot;,\n        &quot;title&quot;: &quot;&quot;,\n        &quot;level_title&quot;: &quot;&quot;,\n        &quot;clinic&quot;: &quot;&quot;,\n        &quot;hospital&quot;: &quot;&quot;\n      }\n    }\n  ],\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
-    } ]
-  }, {
-    "api_summary" : {
-      "title" : "Create create_oriented_problem",
-      "method" : "POST",
-      "path" : "/v1/create_oriented_problem"
-    },
-    "api_request" : {
-      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   user_id [string]\r\n   doctor_ids [string]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   partner_order_id [string]\r\n   price [number]\r\n   platform [string]\r\n",
-      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;doctor_ids&quot;: &quot;b092c63582871cc0&quot;,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#37324;&#26159;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#37324;&#26159;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;patient_meta&quot;,\n      &quot;age&quot;: &quot;15&#23681;&quot;,\n      &quot;sex&quot;: &quot;&#30007;&quot;\n    }\n  ],\n  &quot;partner_order_id&quot;: &quot;0111222333abs2&quot;,\n  &quot;price&quot;: 100,\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
-    },
-    "api_response" : [ {
-      "status" : "HTTP/1.1 200 ",
-      "code" : 200,
-      "message" : "OK",
-      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;problems [array]\r\n    &#9474;   &#9500;&#9472;&#9472;doctor_id [string]\r\n    &#9474;   &#9500;&#9472;&#9472;problem_id [number]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
-      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;problems&quot;: [\n      {\n        &quot;doctor_id&quot;: &quot;b092c63582871cc0&quot;,\n        &quot;problem_id&quot;: 442936722\n      }\n    ],\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
     } ]
   }, {
     "api_summary" : {
@@ -243,6 +117,150 @@ var APIDATA = {
     } ]
   }, {
     "api_summary" : {
+      "title" : "Create get_paid_problem_clinicno",
+      "method" : "POST",
+      "path" : "/v1/get_paid_problem_clinicno"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   user_id [string]\r\n   ask [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   platform [string]\r\n",
+      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;ask&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&quot;\n    }\n  ],\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;clinic_no [string]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;clinic_no&quot;: &quot;2&quot;,\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create get_emergency_graph",
+      "method" : "POST",
+      "path" : "/v1/get_emergency_graph"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   user_id [string]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   platform [string]\r\n",
+      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#25289;&#32922;&#23376;&#65292;&#22836;&#30171;&#65292;&#21457;&#28903;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;patient_meta&quot;,\n      &quot;age&quot;: &quot;15&#23681;&quot;,\n      &quot;sex&quot;: &quot;&#30007;&quot;\n    }\n  ],\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;clinic_info [array]\r\n    &#9500;&#9472;&#9472;err [number]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;clinic_info&quot;: [],\n    &quot;err&quot;: 0\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create create_paid_problem",
+      "method" : "POST",
+      "path" : "/v1/create_paid_problem"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   user_id [string]\r\n   clinic_no [string]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   partner_order_id [string]\r\n   pay_type [string]\r\n   Platform [string]\r\n",
+      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;clinic_no&quot;: &quot;1&quot;,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;patient_meta&quot;,\n      &quot;age&quot;: &quot;15&#23681;&quot;,\n      &quot;sex&quot;: &quot;&#30007;&quot;\n    }\n  ],\n  &quot;partner_order_id&quot;: &quot;123abc&quot;,\n  &quot;pay_type&quot;: &quot;qc_hospital_common&quot;,\n  &quot;Platform&quot;: &quot;chunyu&quot;\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;problem_id [number]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;problem_id&quot;: 442936668,\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create create_free_problem",
+      "method" : "POST",
+      "path" : "/v1/create_free_problem"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   user_id [string]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   Platform [string]\r\n   clinic_no [string]\r\n",
+      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;patient_meta&quot;,\n      &quot;age&quot;: &quot;15&#23681;&quot;,\n      &quot;sex&quot;: &quot;&#30007;&quot;\n    }\n  ],\n  &quot;Platform&quot;: &quot;chunyu&quot;,\n  &quot;clinic_no&quot;: &quot;1&quot;\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;problem_id [number]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;problem_id&quot;: 442936660,\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create create_oriented_problem",
+      "method" : "POST",
+      "path" : "/v1/create_oriented_problem"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   user_id [string]\r\n   doctor_ids [string]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   partner_order_id [string]\r\n   price [number]\r\n   platform [string]\r\n",
+      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;doctor_ids&quot;: &quot;b092c63582871cc0&quot;,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#37324;&#26159;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#37324;&#26159;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&#35814;&#32454;&#20869;&#23481;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;patient_meta&quot;,\n      &quot;age&quot;: &quot;15&#23681;&quot;,\n      &quot;sex&quot;: &quot;&#30007;&quot;\n    }\n  ],\n  &quot;partner_order_id&quot;: &quot;0111222333abs2&quot;,\n  &quot;price&quot;: 100,\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;problems [array]\r\n    &#9474;   &#9500;&#9472;&#9472;doctor_id [string]\r\n    &#9474;   &#9500;&#9472;&#9472;problem_id [number]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;problems&quot;: [\n      {\n        &quot;doctor_id&quot;: &quot;b092c63582871cc0&quot;,\n        &quot;problem_id&quot;: 442936722\n      }\n    ],\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create create_emergency_graph",
+      "method" : "POST",
+      "path" : "/v1/create_emergency_graph"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   user_id [string]\r\n   clinic_no [string]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   partner_order_id [string]\r\n   price [number]\r\n   platform [string]\r\n",
+      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;clinic_no&quot;: &quot;1&quot;,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#37324;&#26159;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;patient_meta&quot;,\n      &quot;age&quot;: &quot;15&#23681;&quot;,\n      &quot;sex&quot;: &quot;&#30007;&quot;\n    }\n  ],\n  &quot;partner_order_id&quot;: &quot;0111222333abs211&quot;,\n  &quot;price&quot;: 100,\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;problem_id [number]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;problem_id&quot;: 0,\n    &quot;error&quot;: 10013,\n    &quot;error_msg&quot;: &quot;invalid clinic no&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create chunyu_question_close",
+      "method" : "POST",
+      "path" : "/v1/chunyu_question_close"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   problem_id [number]\r\n   user_id [string]\r\n   sign [string]\r\n   atime [number]\r\n   status [string]\r\n   msg [string]\r\n   price [number]\r\n",
+      "example" : "{\n  &quot;problem_id&quot;: 1,\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;sign&quot;: &quot;12345abcde&quot;,\n  &quot;atime&quot;: 137322417,\n  &quot;status&quot;: &quot;close&quot;,\n  &quot;msg&quot;: &quot;close&quot;,\n  &quot;price&quot;: 10000\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   error [number]\r\n   error_msg [string]\r\n",
+      "example" : "{\n  &quot;error&quot;: 0,\n  &quot;error_msg&quot;: &quot;&quot;\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create chunyu_doctor_response",
+      "method" : "POST",
+      "path" : "/v1/chunyu_doctor_response"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   problem_id [number]\r\n   user_id [string]\r\n   sign [string]\r\n   atime [number]\r\n   content [string]\r\n   is_summary [boolean]\r\n   doctor [object]\r\n    &#9500;&#9472;&#9472;id [string]\r\n    &#9500;&#9472;&#9472;name [string]\r\n    &#9500;&#9472;&#9472;image [string]\r\n    &#9500;&#9472;&#9472;title [string]\r\n    &#9500;&#9472;&#9472;level_title [string]\r\n    &#9500;&#9472;&#9472;clinic [string]\r\n    &#9500;&#9472;&#9472;clinic_no [string]\r\n    &#9500;&#9472;&#9472;hospital [string]\r\n    &#9500;&#9472;&#9472;hospital_grade [string]\r\n    &#9500;&#9472;&#9472;good_at [string]\r\n",
+      "example" : "{\n  &quot;problem_id&quot;: 1,\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;sign&quot;: &quot;12345abcde&quot;,\n  &quot;atime&quot;: 137322417,\n  &quot;content&quot;: &quot;[ {\\&quot;type\\&quot;:\\&quot;text\\&quot;,\\&quot;text\\&quot;: \\&quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;\\&quot;}]&quot;,\n  &quot;is_summary&quot;: true,\n  &quot;doctor&quot;: {\n    &quot;id&quot;: &quot;&#21307;&#29983; ID&quot;,\n    &quot;name&quot;: &quot;&#29579;&#38050;&#34507;&quot;,\n    &quot;image&quot;: &quot;&#21307;&#29983;&#29031;&#29255;&#30340; url&quot;,\n    &quot;title&quot;: &quot;&#21307;&#29983;&#32844;&#31216;&quot;,\n    &quot;level_title&quot;: &quot;&#24102;&#21307;&#38498;&#32423;&#21035;&#30340;&#21307;&#29983;&#32844;&#31216;&quot;,\n    &quot;clinic&quot;: &quot;&#31185;&#23460;&quot;,\n    &quot;clinic_no&quot;: &quot;&#31185;&#23460;&#21495;&quot;,\n    &quot;hospital&quot;: &quot;&#21327;&#21644;&#21307;&#38498;&quot;,\n    &quot;hospital_grade&quot;: &quot;&#19977;&#32423;&#30002;&#31561;&quot;,\n    &quot;good_at&quot;: &quot;&#20869;&#31185;, &#22806;&#31185;&quot;\n  }\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   error [number]\r\n   error_msg [string]\r\n",
+      "example" : "{\n  &quot;error&quot;: 0,\n  &quot;error_msg&quot;: &quot;&quot;\n}"
+    } ]
+  }, {
+    "api_summary" : {
       "title" : "Create refund_oriented_problem",
       "method" : "POST",
       "path" : "/v1/refund_oriented_problem"
@@ -279,57 +297,39 @@ var APIDATA = {
     } ]
   }, {
     "api_summary" : {
-      "title" : "Create get_paid_problem_clinicno",
+      "title" : "Create append_problem",
       "method" : "POST",
-      "path" : "/v1/get_paid_problem_clinicno"
+      "path" : "/v1/append_problem"
     },
     "api_request" : {
       "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   user_id [string]\r\n   ask [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   platform [string]\r\n",
-      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;ask&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#26159;&#19968;&#27573;&#25991;&#26412;&#24418;&#24335;&#30340;&#20869;&#23481;&quot;\n    }\n  ],\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
+      "model" : "   user_id [string]\r\n   problem_id [number]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   platform [string]\r\n",
+      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;problem_id&quot;: 442936669,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#25105;&#21448;&#24863;&#20882;&#20102;&quot;\n    }\n  ],\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
     },
     "api_response" : [ {
       "status" : "HTTP/1.1 200 ",
       "code" : 200,
       "message" : "OK",
-      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;clinic_no [string]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
-      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;clinic_no&quot;: &quot;2&quot;,\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;error&quot;: 10603,\n    &quot;error_msg&quot;: &quot;&#24403;&#21069;&#38382;&#39064;&#29366;&#24577;&#19981;&#33021;&#36827;&#34892;&#35813;&#25805;&#20316;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
     } ]
   }, {
     "api_summary" : {
-      "title" : "Create create_emergency_graph",
+      "title" : "Create assess_problem",
       "method" : "POST",
-      "path" : "/v1/create_emergency_graph"
+      "path" : "/v1/assess_problem"
     },
     "api_request" : {
       "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   user_id [string]\r\n   clinic_no [string]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   partner_order_id [string]\r\n   price [number]\r\n   platform [string]\r\n",
-      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;clinic_no&quot;: &quot;1&quot;,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#36825;&#37324;&#26159;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&#26631;&#39064;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;patient_meta&quot;,\n      &quot;age&quot;: &quot;15&#23681;&quot;,\n      &quot;sex&quot;: &quot;&#30007;&quot;\n    }\n  ],\n  &quot;partner_order_id&quot;: &quot;0111222333abs211&quot;,\n  &quot;price&quot;: 100,\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
+      "model" : "   user_id [string]\r\n   problem_id [number]\r\n   assess_info [object]\r\n    &#9500;&#9472;&#9472;level [string]\r\n    &#9500;&#9472;&#9472;tag_keys [array]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   platform [string]\r\n",
+      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;problem_id&quot;: 442936669,\n  &quot;assess_info&quot;: {\n    &quot;level&quot;: &quot;best&quot;,\n    &quot;tag_keys&quot;: [\n      &quot;3201&quot;,\n      &quot;3102&quot;\n    ]\n  },\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#22909;&#22909;&#22909;&quot;\n    }\n  ],\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
     },
     "api_response" : [ {
       "status" : "HTTP/1.1 200 ",
       "code" : 200,
       "message" : "OK",
-      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;problem_id [number]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
-      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;problem_id&quot;: 0,\n    &quot;error&quot;: 10013,\n    &quot;error_msg&quot;: &quot;invalid clinic no&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
-    } ]
-  }, {
-    "api_summary" : {
-      "title" : "Create get_emergency_graph",
-      "method" : "POST",
-      "path" : "/v1/get_emergency_graph"
-    },
-    "api_request" : {
-      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
-      "model" : "   user_id [string]\r\n   content [array]\r\n    &#9500;&#9472;&#9472;type [string]\r\n    &#9500;&#9472;&#9472;text [string]\r\n   platform [string]\r\n",
-      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;content&quot;: [\n    {\n      &quot;type&quot;: &quot;text&quot;,\n      &quot;text&quot;: &quot;&#25289;&#32922;&#23376;&#65292;&#22836;&#30171;&#65292;&#21457;&#28903;&quot;\n    },\n    {\n      &quot;type&quot;: &quot;patient_meta&quot;,\n      &quot;age&quot;: &quot;15&#23681;&quot;,\n      &quot;sex&quot;: &quot;&#30007;&quot;\n    }\n  ],\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
-    },
-    "api_response" : [ {
-      "status" : "HTTP/1.1 200 ",
-      "code" : 200,
-      "message" : "OK",
-      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;clinic_info [array]\r\n    &#9500;&#9472;&#9472;err [number]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
-      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;clinic_info&quot;: [],\n    &quot;err&quot;: 0\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;error&quot;: 1,\n    &quot;error_msg&quot;: &quot;&#19981;&#33021;&#35780;&#20215;&#27809;&#26377;&#22238;&#22797;&#30340;&#38382;&#39064;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
     } ]
   } ]
 };
