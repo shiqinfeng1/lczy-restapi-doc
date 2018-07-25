@@ -204,6 +204,12 @@ var APIDATA = {
       "message" : "OK",
       "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;problems [array]\r\n    &#9474;   &#9500;&#9472;&#9472;doctor_id [string]\r\n    &#9474;   &#9500;&#9472;&#9472;problem_id [number]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
       "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;problems&quot;: [\n      {\n        &quot;doctor_id&quot;: &quot;b092c63582871cc0&quot;,\n        &quot;problem_id&quot;: 442936722\n      }\n    ],\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    }, {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;problems [array]\r\n    &#9474;   &#9500;&#9472;&#9472;doctor_id [string]\r\n    &#9474;   &#9500;&#9472;&#9472;problem_id [number]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;problems&quot;: [\n      {\n        &quot;doctor_id&quot;: &quot;b092c63582871cc0&quot;,\n        &quot;problem_id&quot;: 442936805\n      }\n    ],\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
     } ]
   }, {
     "api_summary" : {
@@ -330,6 +336,72 @@ var APIDATA = {
       "message" : "OK",
       "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
       "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;error&quot;: 1,\n    &quot;error_msg&quot;: &quot;&#19981;&#33021;&#35780;&#20215;&#27809;&#26377;&#22238;&#22797;&#30340;&#38382;&#39064;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    }, {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    }, {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;error&quot;: 10402,\n    &quot;error_msg&quot;: &quot;&#24744;&#24050;&#32463;&#36827;&#34892;&#36807;&#35780;&#20215;,&#19981;&#33021;&#20877;&#27425;&#35780;&#20215;!&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create close_problem",
+      "method" : "POST",
+      "path" : "/v1/close_problem"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   user_id [string]\r\n   problem_id [number]\r\n   platform [string]\r\n",
+      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;problem_id&quot;: 442936669,\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;error&quot;: 1,\n    &quot;error_msg&quot;: &quot;invalid assessment&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create delete_problem",
+      "method" : "POST",
+      "path" : "/v1/delete_problem"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   user_id [string]\r\n   problem_id [number]\r\n   platform [string]\r\n",
+      "example" : "{\n  &quot;user_id&quot;: &quot;123456&quot;,\n  &quot;problem_id&quot;: 442936669,\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;error&quot;: 1,\n    &quot;error_msg&quot;: &quot;invalid assessment&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
+    } ]
+  }, {
+    "api_summary" : {
+      "title" : "Create patient_login",
+      "method" : "POST",
+      "path" : "/v1/patient_login"
+    },
+    "api_request" : {
+      "header" : "Accept : application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain\r\nContent-Type : application/json; charset=UTF-8\r\n",
+      "model" : "   password [string]\r\n   user_id [string]\r\n   lon [string]\r\n   lat [string]\r\n   platform [string]\r\n",
+      "example" : "{\n  &quot;password&quot;: &quot;11111111&quot;,\n  &quot;user_id&quot;: &quot;12345678&quot;,\n  &quot;lon&quot;: &quot;22.2&quot;,\n  &quot;lat&quot;: &quot;44.4&quot;,\n  &quot;platform&quot;: &quot;chunyu&quot;\n}"
+    },
+    "api_response" : [ {
+      "status" : "HTTP/1.1 200 ",
+      "code" : 200,
+      "message" : "OK",
+      "model" : "   errcode [string]\r\n   msg [string]\r\n   data [object]\r\n    &#9500;&#9472;&#9472;error [number]\r\n    &#9500;&#9472;&#9472;error_msg [string]\r\n   page [object]\r\n    &#9500;&#9472;&#9472;current [number]\r\n",
+      "example" : "{\n  &quot;errcode&quot;: &quot;0&quot;,\n  &quot;msg&quot;: &quot;&quot;,\n  &quot;data&quot;: {\n    &quot;error&quot;: 0,\n    &quot;error_msg&quot;: &quot;user logged in ok&quot;\n  },\n  &quot;page&quot;: {\n    &quot;current&quot;: 0\n  }\n}"
     } ]
   } ]
 };
